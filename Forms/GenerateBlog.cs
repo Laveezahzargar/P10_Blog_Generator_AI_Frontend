@@ -19,7 +19,6 @@ namespace P10_Blog_Generator_AI_Frontend.Forms
         {
 
         }
-
         private void btnGenerateBlog_Click_1(object sender, EventArgs e)
         {
             this.Hide();
