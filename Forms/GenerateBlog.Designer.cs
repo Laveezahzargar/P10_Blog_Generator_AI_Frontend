@@ -36,12 +36,12 @@
             label6 = new Label();
             btnGenerateBlog = new Button();
             label7 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            txtTopic = new TextBox();
+            cmbCategory = new ComboBox();
+            cmbAudience = new ComboBox();
+            cmbTone = new ComboBox();
+            numWordCount = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numWordCount).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -118,54 +118,54 @@
             label7.TabIndex = 7;
             label7.Text = "© 2026 AI Blog Generator | Powered by Artificial Intelligence";
             // 
-            // textBox1
+            // txtTopic
             // 
-            textBox1.Location = new Point(664, 99);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(257, 31);
-            textBox1.TabIndex = 8;
+            txtTopic.Location = new Point(664, 99);
+            txtTopic.Name = "txtTopic";
+            txtTopic.Size = new Size(257, 31);
+            txtTopic.TabIndex = 8;
             // 
-            // comboBox1
+            // cmbCategory
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(664, 152);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(257, 33);
-            comboBox1.TabIndex = 9;
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(664, 152);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(257, 33);
+            cmbCategory.TabIndex = 9;
             // 
-            // comboBox2
+            // cmbAudience
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(664, 209);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(257, 33);
-            comboBox2.TabIndex = 10;
+            cmbAudience.FormattingEnabled = true;
+            cmbAudience.Location = new Point(664, 209);
+            cmbAudience.Name = "cmbAudience";
+            cmbAudience.Size = new Size(257, 33);
+            cmbAudience.TabIndex = 10;
             // 
-            // comboBox3
+            // cmbTone
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(664, 264);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(257, 33);
-            comboBox3.TabIndex = 11;
+            cmbTone.FormattingEnabled = true;
+            cmbTone.Location = new Point(664, 264);
+            cmbTone.Name = "cmbTone";
+            cmbTone.Size = new Size(257, 33);
+            cmbTone.TabIndex = 11;
             // 
-            // numericUpDown1
+            // numWordCount
             // 
-            numericUpDown1.Location = new Point(664, 324);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(257, 31);
-            numericUpDown1.TabIndex = 12;
+            numWordCount.Location = new Point(664, 324);
+            numWordCount.Name = "numWordCount";
+            numWordCount.Size = new Size(257, 31);
+            numWordCount.TabIndex = 12;
             // 
             // GenerateBlog
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1354, 670);
-            Controls.Add(numericUpDown1);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            Controls.Add(numWordCount);
+            Controls.Add(cmbTone);
+            Controls.Add(cmbAudience);
+            Controls.Add(cmbCategory);
+            Controls.Add(txtTopic);
             Controls.Add(label7);
             Controls.Add(btnGenerateBlog);
             Controls.Add(label6);
@@ -176,7 +176,8 @@
             Controls.Add(label1);
             Name = "GenerateBlog";
             Text = "GenerateBlog";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += GenerateBlog_Load;
+            ((System.ComponentModel.ISupportInitialize)numWordCount).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,10 +192,10 @@
         private Label label6;
         private Button btnGenerateBlog;
         private Label label7;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private NumericUpDown numericUpDown1;
+        private TextBox txtTopic;
+        private ComboBox cmbCategory;
+        private ComboBox cmbAudience;
+        private ComboBox cmbTone;
+        private NumericUpDown numWordCount;
     }
 }

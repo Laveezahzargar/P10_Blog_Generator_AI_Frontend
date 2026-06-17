@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             lblTitle = new Label();
@@ -37,15 +36,6 @@
             btnDelete = new Button();
             btnClose = new Button();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // label2
             // 
@@ -81,6 +71,7 @@
             richTextBoxBlogContent.Size = new Size(539, 308);
             richTextBoxBlogContent.TabIndex = 4;
             richTextBoxBlogContent.Text = "";
+            richTextBoxBlogContent.TextChanged += richTextBoxBlogContent_TextChanged;
             // 
             // btnRegenerate
             // 
@@ -90,6 +81,7 @@
             btnRegenerate.TabIndex = 5;
             btnRegenerate.Text = "Regenerate";
             btnRegenerate.UseVisualStyleBackColor = true;
+            btnRegenerate.Click += btnRegenerate_Click;
             // 
             // btnDelete
             // 
@@ -99,6 +91,7 @@
             btnDelete.TabIndex = 6;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnClose
             // 
@@ -122,7 +115,6 @@
             Controls.Add(lblTitle);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "ViewBlog";
             Text = "ViewBlog";
             ResumeLayout(false);
@@ -130,8 +122,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label lblTitle;

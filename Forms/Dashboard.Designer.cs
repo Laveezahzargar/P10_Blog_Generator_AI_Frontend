@@ -76,6 +76,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnLogout
             // 
@@ -99,10 +100,10 @@
             // dataGridViewBlogs
             // 
             dataGridViewBlogs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBlogs.Location = new Point(399, 247);
+            dataGridViewBlogs.Location = new Point(105, 231);
             dataGridViewBlogs.Name = "dataGridViewBlogs";
             dataGridViewBlogs.RowHeadersWidth = 62;
-            dataGridViewBlogs.Size = new Size(520, 322);
+            dataGridViewBlogs.Size = new Size(1158, 355);
             dataGridViewBlogs.TabIndex = 6;
             dataGridViewBlogs.CellClick += dataGridViewBlogs_CellClick;
             dataGridViewBlogs.CellContentClick += dataGridViewBlogs_CellContentClick;
