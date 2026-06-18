@@ -40,6 +40,7 @@ namespace P10_Blog_Generator_AI_Frontend.Forms
             try
             {
                 btnRegenerate.Enabled = false;
+ 
                 var response =
                     await _apiService.RegenerateBlogAsync(_blog.BlogRequestId);
 
@@ -75,7 +76,7 @@ namespace P10_Blog_Generator_AI_Frontend.Forms
             try
             {
                 var response =
-               await _apiService.DeleteBlogAsync(_blog.BlogId);
+               await _apiService.DeleteBlogAsync(_blog.GeneratedBlogId);
 
                 if (response.IsSuccessStatusCode)
                 {

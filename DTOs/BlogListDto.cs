@@ -7,6 +7,7 @@ namespace P10_Blog_Generator_AI_Frontend.DTOs
     public class BlogListDto
     {
         public int GeneratedBlogId { get; set; }
+        public int BlogRequestId { get; set; }
 
         public string Title { get; set; }
 

@@ -2,7 +2,7 @@
 {
     public class BlogDto
     {
-        public int BlogId { get; set; }
+        public int GeneratedBlogId { get; set; }
         public int BlogRequestId { get; set; }
 
         public string Title { get; set; }

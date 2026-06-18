@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Net.Http.Json;
 using System.Text;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace P10_Blog_Generator_AI_Frontend.Forms
 {
@@ -62,7 +63,15 @@ namespace P10_Blog_Generator_AI_Frontend.Forms
                 else
                 {
                     var error = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show(error);
+                    if (error.Contains("429"))
+                    {
+                        MessageBox.Show(
+                            "AI service rate limit reached. Please try again in a minute.");
+                    }
+                    else
+                    {
+                        MessageBox.Show(error);
+                    }
                 }
             }
             catch (Exception ex)
