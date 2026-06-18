@@ -6,8 +6,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Net.Http.Json;
-using System.Text;
-using System.Windows.Forms;
 
 namespace P10_Blog_Generator_AI_Frontend.Forms
 {
